@@ -1,0 +1,13 @@
+body {
+  background: red;
+  font: "Helvetica"; }
+  body h1 {
+    color: green; }
+
+nav {
+  width: 100%; }
+  nav ul {
+    list-type: none; }
+    nav ul li {
+      padding: 5px;
+      color: green; }
