@@ -9,20 +9,56 @@ body {
 	}
 }
 
+.wrap {
+	margin: 0 5%;
+	width: 90%;
+}
 
-header {
+header.main {
+	text-align: center;
+
 	.logo {
+		display: block;
+		margin: 20px auto 10px auto;
+		position: relative;
 		width: 250px;
 	}
 }
 
-nav {
-	width: 100%;
+.slogan {
+	color: rgb(164,82, 16);
+	display: inline-block;
+	font-family: $slogan-font;
+	font-size: 22px;
+	margin: 5px auto 20px auto;
+}
+
+nav.main {
+	font-family: $nav-font;
+	font-weight: 400;
+	text-transform: uppercase;
 	ul {
-		list-type: none;
-		li {
-			padding: 5px;
-			color: $accent-color;
-		}
+		margin: 0;
+		padding: 0;
 	}
+	li {
+		background: rgb(255, 204, 62);
+		font-size: 26px;
+		margin: 10px 0;
+	}
+	a {
+		color: rgb(120, 54, 23);
+		display: block;
+		padding: 12px 0;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	a:visited {
+		color: auto;
+	}
+}
+
+.svg nav.main li {
+	
 }

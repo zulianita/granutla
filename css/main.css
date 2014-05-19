@@ -4,13 +4,41 @@ body {
   body h1 {
     color: green; }
 
-header .logo {
-  width: 250px; }
+.wrap {
+  margin: 0 5%;
+  width: 90%; }
 
-nav {
-  width: 100%; }
-  nav ul {
-    list-type: none; }
-    nav ul li {
-      padding: 5px;
-      color: green; }
+header.main {
+  text-align: center; }
+  header.main .logo {
+    display: block;
+    margin: 20px auto 10px auto;
+    position: relative;
+    width: 250px; }
+
+.slogan {
+  color: #a45210;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+  margin: 5px auto 20px auto; }
+
+nav.main {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  text-transform: uppercase; }
+  nav.main ul {
+    margin: 0;
+    padding: 0; }
+  nav.main li {
+    background: #ffcc3e;
+    font-size: 26px;
+    margin: 10px 0; }
+  nav.main a {
+    color: #783617;
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    width: 100%; }
+  nav.main a:visited {
+    color: auto; }
