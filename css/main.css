@@ -2,7 +2,7 @@ body {
   background: white;
   font: "Helvetica"; }
   body h1 {
-    color: green; }
+    color: #48b749; }
 
 .wrap {
   margin: 0 5%;
@@ -17,28 +17,56 @@ header.main {
     width: 250px; }
 
 .slogan {
-  color: #a45210;
+  color: #c46524;
   display: inline-block;
   font-family: "Roboto Slab", serif;
   font-size: 22px;
   margin: 5px auto 20px auto; }
 
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 nav.main {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
+  margin: 25px 0;
   text-transform: uppercase; }
-  nav.main ul {
-    margin: 0;
-    padding: 0; }
   nav.main li {
     background: #ffcc3e;
     font-size: 26px;
     margin: 10px 0; }
   nav.main a {
-    color: #783617;
+    color: #6a3a20;
     display: block;
     padding: 12px 0;
     text-decoration: none;
     width: 100%; }
   nav.main a:visited {
     color: auto; }
+
+.svg .separator {
+  background: url("../img/separator_center.svg");
+  height: 13px;
+  margin: auto;
+  position: relative;
+  width: 80%; }
+  .svg .separator .left, .svg .separator .right {
+    height: 100%;
+    position: relative;
+    width: 29px; }
+  .svg .separator .left {
+    background: url("../img/separator_left.svg");
+    margin-left: -20px; }
+  .svg .separator .right {
+    background: url("../img/separator_right.svg");
+    margin-right: -20px; }
+
+.left {
+  display: block;
+  float: left; }
+
+.right {
+  display: block;
+  float: right; }
