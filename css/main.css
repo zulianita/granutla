@@ -1,3 +1,11 @@
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
 body {
   background: white;
   font: "Helvetica"; }
@@ -12,16 +20,16 @@ header.main {
   text-align: center; }
   header.main .logo {
     display: block;
-    margin: 20px auto 10px auto;
+    margin: 12px auto 5px auto;
     position: relative;
-    width: 250px; }
+    width: 220px; }
 
 .slogan {
   color: #c46524;
   display: inline-block;
   font-family: "Roboto Slab", serif;
-  font-size: 22px;
-  margin: 5px auto 20px auto; }
+  font-size: 20px;
+  margin: 2px auto 10px auto; }
 
 nav ul {
   margin: 0;
@@ -31,13 +39,16 @@ nav ul {
 nav.main {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
-  margin: 25px 0;
+  margin: 16px 0;
   text-transform: uppercase; }
   nav.main li {
-    background: #ffcc3e;
-    font-size: 26px;
-    margin: 10px 0; }
+    font-size: 22px;
+    margin: 10px 0;
+    padding: 0 41px;
+    position: relative;
+    width: 100%; }
   nav.main a {
+    background: #ffcc3e;
     color: #6a3a20;
     display: block;
     padding: 12px 0;
@@ -45,23 +56,66 @@ nav.main {
     width: 100%; }
   nav.main a:visited {
     color: auto; }
+  nav.main a:before,
+  nav.main a:after {
+    background: #ffcc3e; }
+
+nav.main:before {
+  background: #ffcc3e;
+  content: "M";
+  display: block;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.svg nav.main a:before,
+.svg nav.main a:after {
+  background: transparent url("../img/menu_item_ends.svg");
+  background-size: 100%;
+  background-repeat: none;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 43px; }
+
+.svg nav.main a:before {
+  left: 0; }
+
+.svg nav.main a:after {
+  right: 0;
+  background-position: -85px -28%; }
+
+.svg nav.main li:nth-child(2n+2) a:before {
+  background-position: left 34%; }
+
+.svg nav.main li:nth-child(2n+2) a:after {
+  background-position: left -61%; }
 
 .svg .separator {
-  background: url("../img/separator_center.svg");
+  background: transparent url("../img/separator_center.svg");
+  background-repeat: repeat-x;
   height: 13px;
   margin: auto;
   position: relative;
-  width: 80%; }
-  .svg .separator .left, .svg .separator .right {
-    height: 100%;
-    position: relative;
-    width: 29px; }
-  .svg .separator .left {
-    background: url("../img/separator_left.svg");
-    margin-left: -20px; }
-  .svg .separator .right {
-    background: url("../img/separator_right.svg");
-    margin-right: -20px; }
+  width: 78%; }
+  .svg .separator:before, .svg .separator:after {
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 13px;
+    position: absolute;
+    width: 28px; }
+  .svg .separator:before {
+    background: url("../img/separator_left.svg") no-repeat;
+    left: -21px; }
+  .svg .separator:after {
+    background: url("../img/separator_right.svg") no-repeat;
+    right: -22px;
+    top: -1px; }
 
 .left {
   display: block;

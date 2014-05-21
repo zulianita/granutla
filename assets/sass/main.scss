@@ -1,6 +1,12 @@
 @import "colors";
 @import "typography";
 
+* { 
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 body {
 	background: $main-color;
 	font: $main-font;
@@ -19,9 +25,9 @@ header.main {
 
 	.logo {
 		display: block;
-		margin: 20px auto 10px auto;
+		margin: 12px auto 5px auto;
 		position: relative;
-		width: 250px;
+		width: 220px;
 	}
 }
 
@@ -29,8 +35,8 @@ header.main {
 	color: $medium-color;
 	display: inline-block;
 	font-family: $slogan-font;
-	font-size: 22px;
-	margin: 5px auto 20px auto;
+	font-size: 20px;
+	margin: 2px auto 10px auto;
 }
 
 nav {
@@ -44,48 +50,84 @@ nav {
 nav.main {
 	font-family: $nav-font;
 	font-weight: 400;
-	margin: 25px 0;
+	margin: 16px 0;
 	text-transform: uppercase;
 	li {
-		background: rgb(255, 204, 62);
-		font-size: 26px;
+		font-size: 22px;
 		margin: 10px 0;
+		padding: 0 41px;
+		position: relative;
+		width: 100%;
 	}
 	a {
+		background: $light-color;
 		color: $dark-color;
 		display: block;
 		padding: 12px 0;
 		text-decoration: none;
 		width: 100%;
 	}
-
 	a:visited {
 		color: auto;
 	}
+	a:before,
+	a:after { background: $light-color; }
 }
 
-.svg nav.main li {
-	
+nav.main:before {
+	background: $light-color;
+	content: "M";
+	display: block;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
+
+.svg nav.main a:before,
+.svg nav.main a:after {
+	background: transparent url('../img/menu_item_ends.svg');
+	background-size: 100%;
+	background-repeat: none;
+	content: "";
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 43px;
+}
+
+.svg nav.main a:before { left: 0; }
+.svg nav.main a:after { right: 0; background-position: -85px -28%;}
+
+.svg nav.main li:nth-child(2n+2) a:before { background-position: left 34%;}
+.svg nav.main li:nth-child(2n+2) a:after { background-position: left -61%;}
 
 .svg .separator {
-	background: url('../img/separator_center.svg');
+	background: transparent url('../img/separator_center.svg');
+	background-repeat: repeat-x;
 	height: 13px;
 	margin: auto;
 	position: relative;
-	width: 80%;
-	.left, .right {
-		height: 100%;
-		position: relative;
-		width: 29px;
+	width: 78%;
+	&:before,
+	&:after {
+		background-repeat: no-repeat;
+		content: "";
+		display: block;
+		height: 13px;
+		position: absolute;
+		width: 28px;
 	}
-	.left {
-		background: url('../img/separator_left.svg');
-		margin-left: -20px;
+	&:before {
+		background: url('../img/separator_left.svg') no-repeat;
+		left: -21px;
 	}
-	.right {
-		background: url('../img/separator_right.svg');
-		margin-right: -20px;
+	&:after {
+		background: url('../img/separator_right.svg') no-repeat;
+		right: -22px;
+		top: -1px;
 	}
 }
 
