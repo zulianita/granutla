@@ -1,3 +1,16 @@
+nav.main {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400; }
+
+.slogan {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px; }
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  font-weight: 400; }
+
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -8,7 +21,7 @@
 
 body {
   background: white;
-  font: "Helvetica"; }
+  font: "Georgia"; }
   body h1 {
     color: #48b749; }
 
@@ -16,19 +29,21 @@ body {
   margin: 0 5%;
   width: 90%; }
 
+img {
+  max-width: 100%;
+  display: block; }
+
 header.main {
   text-align: center; }
   header.main .logo {
     display: block;
-    margin: 12px auto 5px auto;
+    margin: 12px auto 6px auto;
     position: relative;
-    width: 220px; }
+    width: 200px; }
 
 .slogan {
   color: #c46524;
   display: inline-block;
-  font-family: "Roboto Slab", serif;
-  font-size: 20px;
   margin: 2px auto 10px auto; }
 
 nav ul {
@@ -37,10 +52,10 @@ nav ul {
   list-style: none; }
 
 nav.main {
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  margin: 16px 0;
+  margin: 16px 0 32px 0;
   text-transform: uppercase; }
+  nav.main ul {
+    display: none; }
   nav.main li {
     font-size: 22px;
     margin: 10px 0;
@@ -48,26 +63,35 @@ nav.main {
     position: relative;
     width: 100%; }
   nav.main a {
-    background: #ffcc3e;
+    background: #ffd000;
     color: #6a3a20;
     display: block;
     padding: 12px 0;
     text-decoration: none;
     width: 100%; }
+  nav.main a:hover {
+    color: #c46524; }
   nav.main a:visited {
     color: auto; }
   nav.main a:before,
   nav.main a:after {
-    background: #ffcc3e; }
+    background: #ffd000; }
 
-nav.main:before {
-  background: #ffcc3e;
-  content: "M";
+.menuToggle {
+  background: #ffd000;
+  cursor: pointer;
   display: block;
-  padding: 10px;
+  padding: 5px 10px;
   position: absolute;
   right: 0;
   top: 0; }
+
+#toggle {
+  position: absolute;
+  margin-left: -999999px; }
+
+#toggle:checked ~ ul {
+  display: block; }
 
 .svg nav.main a:before,
 .svg nav.main a:after {

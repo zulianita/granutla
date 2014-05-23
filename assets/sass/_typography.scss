@@ -1,4 +1,20 @@
-$main-font: "Helvetica";
+$main-font: "Georgia";
 $headers-font: 'Roboto Slab', serif;
 $slogan-font: 'Roboto Slab', serif;
 $nav-font:  'Roboto Slab', serif;
+
+nav.main {
+	font-family: $nav-font;
+	font-weight: 400;
+}
+
+.slogan {
+	font-family: $slogan-font;
+	font-size: 14px;
+}
+
+h1 {
+	font-family: $headers-font;
+	font-size: 24px;
+	font-weight: 400;
+}

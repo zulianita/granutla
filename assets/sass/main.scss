@@ -20,22 +20,25 @@ body {
 	width: 90%;
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+
 header.main {
 	text-align: center;
 
 	.logo {
 		display: block;
-		margin: 12px auto 5px auto;
+		margin: 12px auto 6px auto;
 		position: relative;
-		width: 220px;
+		width: 200px;
 	}
 }
 
 .slogan {
 	color: $medium-color;
 	display: inline-block;
-	font-family: $slogan-font;
-	font-size: 20px;
 	margin: 2px auto 10px auto;
 }
 
@@ -48,10 +51,11 @@ nav {
 }
 
 nav.main {
-	font-family: $nav-font;
-	font-weight: 400;
-	margin: 16px 0;
+	margin: 16px 0 32px 0;
 	text-transform: uppercase;
+	ul {
+		display: none;
+	}
 	li {
 		font-size: 22px;
 		margin: 10px 0;
@@ -67,6 +71,9 @@ nav.main {
 		text-decoration: none;
 		width: 100%;
 	}
+	a:hover {
+		color: $medium-color;
+	}
 	a:visited {
 		color: auto;
 	}
@@ -74,15 +81,21 @@ nav.main {
 	a:after { background: $light-color; }
 }
 
-nav.main:before {
+.menuToggle {
 	background: $light-color;
-	content: "M";
+	cursor: pointer;	
 	display: block;
-	padding: 10px;
+	padding: 5px 10px;
 	position: absolute;
 	right: 0;
 	top: 0;
 }
+
+#toggle {
+	position: absolute;
+	margin-left: -999999px;
+}
+#toggle:checked ~ ul { display: block; }
 
 .svg nav.main a:before,
 .svg nav.main a:after {
