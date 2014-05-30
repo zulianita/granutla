@@ -1,18 +1,12 @@
 @import "colors";
 @import "typography";
+@import "animations";
+@import "griddle";
 
 * { 
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-}
-
-body {
-	background: $main-color;
-	font: $main-font;
-	h1 {
-		color: $accent-color;
-	}
 }
 
 .wrap {
@@ -30,16 +24,17 @@ header.main {
 
 	.logo {
 		display: block;
-		margin: 12px auto 6px auto;
+		margin: 12px auto 8px auto;
 		position: relative;
-		width: 200px;
+		width: 180px;
 	}
 }
 
+
 .slogan {
-	color: $medium-color;
 	display: inline-block;
-	margin: 2px auto 10px auto;
+	margin: 6px auto 5px auto;
+	width: 100%;
 }
 
 nav {
@@ -51,7 +46,7 @@ nav {
 }
 
 nav.main {
-	margin: 16px 0 32px 0;
+	margin: 10px 0 10px 0;
 	text-transform: uppercase;
 	ul {
 		display: none;
@@ -64,28 +59,23 @@ nav.main {
 		width: 100%;
 	}
 	a {
-		background: $light-color;
-		color: $dark-color;
 		display: block;
 		padding: 12px 0;
 		text-decoration: none;
 		width: 100%;
 	}
-	a:hover {
-		color: $medium-color;
+}
+
+footer nav {
+	li {
+		display: inline-block;
 	}
-	a:visited {
-		color: auto;
-	}
-	a:before,
-	a:after { background: $light-color; }
 }
 
 .menuToggle {
-	background: $light-color;
 	cursor: pointer;	
 	display: block;
-	padding: 5px 10px;
+	padding: 5px 5px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -121,9 +111,9 @@ nav.main {
 	background: transparent url('../img/separator_center.svg');
 	background-repeat: repeat-x;
 	height: 13px;
-	margin: auto;
+	margin: 14px auto 17px auto;
 	position: relative;
-	width: 78%;
+	width: 85%;
 	&:before,
 	&:after {
 		background-repeat: no-repeat;
@@ -144,6 +134,61 @@ nav.main {
 	}
 }
 
+.call-to-action {
+	display: block;
+	height: 45px;
+	line-height: 40px;
+	margin: auto;
+	width: 90px;
+}
+
+.borderradius .call-to-action {
+	border-radius: 45px;
+	height: 90px;
+	line-height: 85px;
+	padding: 20px auto;
+}
+
 .left { display: block; float: left; }
 .right { display: block; float: right; }
+
+@media screen and (min-width: 768px) {
+	.wrap {
+		max-width: 768px;
+		margin: auto;
+	}
+	.svg .separator {
+		width: 96%;
+	}
+
+	header.main {
+		text-align: left;
+		.logo {
+			display: inline-block;
+			margin: 16px 0 0 0;
+			width: 25%;
+		}
+		.slogan {
+			display: inline-block;
+			margin: 0;
+			padding: 0 0 0 1%;
+			position: relative;
+			width: 74%;
+		}
+	}
+
+	.inline-block-bottom { vertical-align: bottom;}
+
+	@include griddle-build(2 3 4, '--tablet');
+}
+
+@media screen and (min-width: 1024px) {
+	.wrap {
+		max-width: 1024px;
+		height: 400px;
+	}
+
+	@include griddle-build(2 3 4, '--desktop');
+}
+
 

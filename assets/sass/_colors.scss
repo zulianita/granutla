@@ -1,5 +1,50 @@
-$main-color: #fff;
+$main-color: green;
 $accent-color: rgb(72,183,73);
 $light-color: rgb(255, 208, 0);
 $dark-color: rgb(106,58,32);
 $medium-color: rgb(196,101,36);
+
+body {
+	background: $main-color;
+}
+
+h1 {
+	color: $dark-color;
+}
+
+strong em {
+	color: $dark-color;
+}
+
+.call-to-action {
+	border: 3px solid $light-color;
+	color: $medium-color;
+}
+
+.call-to-action:hover {
+	background: $light-color;
+	color: $dark-color;
+}
+
+.slogan {
+	color: $medium-color;
+}
+
+nav.main {
+	a {
+		background: $light-color;
+		color: $dark-color;
+	}
+	a:hover {
+		color: $medium-color;
+	}
+	a:visited {
+		color: auto;
+	}
+	a:before,
+	a:after { background: $light-color; }
+}
+
+.menuToggle {
+	background: $light-color;
+}
